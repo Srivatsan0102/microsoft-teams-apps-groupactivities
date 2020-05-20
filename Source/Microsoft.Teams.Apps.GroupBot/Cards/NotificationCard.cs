@@ -47,12 +47,15 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                Weight = AdaptiveTextWeight.Bolder,
                                Spacing = AdaptiveSpacing.Medium,
                            },
+                           /* Description
                            new AdaptiveTextBlock()
                            {
                                Text = notificationRequest.GroupActivityDescription,
                                Wrap = true,
                                Spacing = AdaptiveSpacing.None,
                            },
+                           */
+                           /* Due date and time
                            new AdaptiveFactSet()
                            {
                               Facts = new List<AdaptiveFact>()
@@ -63,7 +66,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                        Value = "{{DATE(" + notificationRequest.DueDate.ToString(Constants.Rfc3339DateTimeFormat) + ", SHORT)}}",
                                   },
                               },
-                           },
+                           },*/
                        },
                    },
                 },
@@ -132,6 +135,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                             },
                                         },
                                     },
+                                    /* Description
                                     new AdaptiveColumnSet
                                     {
                                         Columns = new List<AdaptiveColumn>
@@ -161,7 +165,8 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                                 },
                                             },
                                         },
-                                    },
+                                    },*/
+                                    /* Due date and time
                                     new AdaptiveColumnSet
                                     {
                                         Columns = new List<AdaptiveColumn>
@@ -191,7 +196,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                                 },
                                             },
                                         },
-                                    },
+                                    },*/
                                 },
                            },
                        },

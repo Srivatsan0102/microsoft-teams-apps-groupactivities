@@ -47,6 +47,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                         Id = "groupTitle",
                         MaxLength = ChannelMaxLength,
                     },
+                    /* // This is for the description.
                     new AdaptiveTextBlock
                     {
                         Spacing = AdaptiveSpacing.Medium,
@@ -59,6 +60,8 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                         IsMultiline = true,
                         MaxLength = DescriptionMaxLength,
                     },
+                    */
+                    /* // These are the columns for date and time.
                     new AdaptiveContainer
                     {
                         Spacing = AdaptiveSpacing.Medium,
@@ -103,7 +106,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                 },
                             },
                         },
-                    },
+                    }, */
                     new AdaptiveContainer
                     {
                         Spacing = AdaptiveSpacing.Medium,
@@ -253,6 +256,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                             },
                         },
                     },
+                    /* // And this is for due date
                     new AdaptiveTextBlock
                     {
                         Spacing = AdaptiveSpacing.Medium,
@@ -301,7 +305,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                 },
                             },
                         },
-                     },
+                     },*/
                 },
                 Actions = new List<AdaptiveAction>
                 {
@@ -361,6 +365,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                         IsVisible = !string.IsNullOrEmpty(groupTitleValidationText),
                         Color = AdaptiveTextColor.Attention,
                     },
+                    /* Description box
                     new AdaptiveTextBlock
                     {
                         Spacing = AdaptiveSpacing.Medium,
@@ -374,6 +379,8 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                         Value = groupDetail.GroupDescription,
                         MaxLength = DescriptionMaxLength,
                     },
+                    */
+                    /* Due Date and time
                     new AdaptiveTextBlock
                     {
                         Text = $"_{groupDescriptionValidationText}_",
@@ -432,7 +439,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                 },
                             },
                         },
-                    },
+                    }, */
                     new AdaptiveContainer
                     {
                         Spacing = AdaptiveSpacing.Medium,
@@ -600,6 +607,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                             },
                         },
                     },
+                    /* Reminder
                     new AdaptiveTextBlock
                     {
                         Spacing = AdaptiveSpacing.Medium,
@@ -648,7 +656,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                 },
                             },
                         },
-                     },
+                     }, */
                 },
                 Actions = new List<AdaptiveAction>
                 {
@@ -744,6 +752,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                     },
                                 },
                             },
+                            /* Description
                             new AdaptiveColumnSet
                             {
                                 Columns = new List<AdaptiveColumn>
@@ -773,7 +782,8 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                         },
                                     },
                                 },
-                            },
+                            },*/
+                            /* Due date and time
                             new AdaptiveColumnSet
                             {
                                 Columns = new List<AdaptiveColumn>
@@ -803,7 +813,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                         },
                                     },
                                 },
-                            },
+                            },*/
                         },
                     },
                     new AdaptiveTextBlock

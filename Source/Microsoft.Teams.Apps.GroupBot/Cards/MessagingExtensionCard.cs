@@ -46,6 +46,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                             Text = $"{activity.CreatedBy} | {createdOnString}",
                             Spacing = AdaptiveSpacing.None,
                         },
+                        /* Description on the messaging extension
                         new AdaptiveTextBlock
                         {
                             Text = Strings.GroupActivityDescriptionTitle,
@@ -57,6 +58,8 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                             Text = activity.GroupActivityDescription,
                             Wrap = true,
                         },
+                        */
+                        /* Due date on the messaging extension
                         new AdaptiveFactSet
                         {
                             Facts = new List<AdaptiveFact>
@@ -67,7 +70,7 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                                     Value = dueDateString,
                                 },
                             },
-                        },
+                        },*/
                     },
                     Actions = new List<AdaptiveAction>
                     {
@@ -81,7 +84,8 @@ namespace Microsoft.Teams.Apps.GroupBot.Cards
                 ThumbnailCard previewCard = new ThumbnailCard
                 {
                     Title = $"<strong>{HttpUtility.HtmlEncode(activity.GroupActivityTitle)}</strong>",
-                    Subtitle = activity.GroupActivityDescription,
+
+                    // Subtitle = activity.GroupActivityDescription,
                     Text = activity.CreatedBy,
                 };
 
